@@ -1,20 +1,18 @@
-.. sl1146 documentation master file, created by
-   sphinx-quickstart on Mon Nov 13 19:06:51 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to sl1146's documentation!
-==================================
+====================
+sl1146 Documentation
+====================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+.. _add_new_prefix:
+   This is the section on adding a new prefix
 
 
-Indices and tables
+Topics
 ==================
-
+* :ref:`add_new_prefix_`
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
