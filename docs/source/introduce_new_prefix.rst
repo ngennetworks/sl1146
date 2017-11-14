@@ -150,4 +150,4 @@ Example from Level3 (for 8.8.8.0/24)::
         Origin: IGP, metric 0, localpref 86, Valid  IGP
         Originator: edge1.Atlanta4
 
-**For more information on validating BGP routing, visit** ":ref:`bgp-validation`"
+**For more information on validating BGP routing, check out ** :ref:`bgp-validation`
