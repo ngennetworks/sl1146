@@ -111,10 +111,26 @@ Configure the TOR Switch
     [edit vlans vlan42]
     user@TOR# top
 
+5) We will assign the host connected to ge-0/0/0 on the TOR switch to have untagged access to VLAN 42::
+    [edit]
+    user@TOR# edit interfaces ge-0/0/0 unit 0 family ethernet-switching
+    [edit interfaces ge-0/0/0 unit 0 family ethernet-switching]
+    user@TOR# set description "CLIENT-42 Host"
+    [edit interfaces ge-0/0/0 unit 0 family ethernet-switching]
+    user@TOR# set port-mode access
+    [edit interfaces ge-0/0/0 unit 0 family ethernet-switching]
+    user@TOR# set vlan members vlan42
+    [edit interfaces ge-0/0/0 unit 0 family ethernet-switching]
+    user@TOR# top
+
 5) Review all changes from the top level of the configuration::
 
     [edit]
     user@TOR# show | compare
+    [edit interfaces ge-0/0/0 unit 0 family ethernet-switching]
+    + description "CLIENT-42 Host";
+    + port-mode access;
+    + vlan members vlan42;
     [edit vlans vlan42]
     + description "CLIENT-42";
     + vlan-id 42;
@@ -149,7 +165,7 @@ Configure the TOR Switch
     user@TOR>
     Name           Tag     Interfaces
     vlan42         42
-                           ae10.0*
+                           ae10.0*, ge-0/0/0*
 
     {master:0}
     user@TOR>
