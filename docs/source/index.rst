@@ -7,7 +7,8 @@ sl1146 Documentation
    :caption: Contents:
    :titlesonly:
 
-   ./*.rst
+   self
+   *.rst
 
 
 Topics
