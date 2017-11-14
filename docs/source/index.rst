@@ -16,3 +16,4 @@ Topics
 * :ref:`route-prefix-to-host`
 * :ref:`add-prefix-vlan`
 * :ref:`bgp-validation`
+* :ref:`new-switch-vlan`
