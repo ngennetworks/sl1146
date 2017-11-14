@@ -5,9 +5,9 @@ sl1146 Documentation
 .. toctree::
    :maxdepth: 4
    :caption: Contents:
-   :titlesonly:
 
-   ./*.rst
+   genindex
+   *.rst
 
 
 .. _introduce-new-prefix:
