@@ -3,7 +3,7 @@ sl1146 Documentation
 ====================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
 
 .. _add_new_prefix:
