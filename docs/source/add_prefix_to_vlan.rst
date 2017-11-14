@@ -59,7 +59,7 @@ In this exercise, we will be adding the documentation prefix "192.0.2.0/24" to V
 
     user@mx> show interfaces terse ae0.100
     Interface               Admin Link Proto    Local                 Remote
-    ae0.10050               up    up   inet     192.0.2.1/24
+    ae0.100               up    up   inet     192.0.2.1/24
                                      multiservice
 
     user@mx>
