@@ -126,8 +126,6 @@ In this exercise, we will be adding the documentation prefix "192.0.2.0/24" to a
 .. _Sprint: https://www.sprint.net/lg/
 .. _HE.net: https://lg.he.net/
 
-**For more information on validating BGP routing, visit** ":ref:`bgp-validation`"
-
 Example from Level3 (for 8.8.8.0/24)::
 
     Report generated from: ear1.atl2
@@ -151,3 +149,5 @@ Example from Level3 (for 8.8.8.0/24)::
         Community: North_America Backbone_2 Lclprf_86 United_States Level3_Peer Atlanta
         Origin: IGP, metric 0, localpref 86, Valid  IGP
         Originator: edge1.Atlanta4
+
+**For more information on validating BGP routing, visit** ":ref:`bgp-validation`"
