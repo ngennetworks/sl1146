@@ -14,7 +14,7 @@ In this exercise, we will be adding the documentation prefix "192.0.2.0/24" to a
 
 1) Connect to OAM VPN
 2) Login to router using IDAM credentials
-3) Enter "configure" mode::
+3) Enter "configure private" mode. This typically ensures that changes don't conflict with each other with multiple users on the system::
 
     user@mx> configure private
 
