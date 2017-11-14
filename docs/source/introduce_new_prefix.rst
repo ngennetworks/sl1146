@@ -92,7 +92,12 @@ In this exercise, we will be adding the documentation prefix "192.0.2.0/24" to a
 
 9) Once you are satisfied with your configuration additions, execute "commit check" to validate your syntax. If no error is returned, you may continue.
 
-10) Once "commit check" clears, run "commit" to implement the change in the running configuration, as well as the persistent configuration on the system.
+10) After "commit check" clears with no errors, execute "commit and-quit" to implement the change in the running configuration, as well as the persistent configuration on the system::
+
+      user@mx# commit and-quit
+      commit complete
+
+      user@mx>
 
 11) After the change is committed, validate that the desired prefix is being announced to upstream peer(s)::
 
