@@ -10,7 +10,7 @@ Introduce a New Prefix
 
 In this exercise, we will be adding the documentation prefix "192.0.2.0/24" to a router interface, and adjust routing policy statements to annouce the IP space to the upstream IP Transit provider. We will assign a /30 address on interface "ae0.100"; this is a LAG interface with a VLAN tag of 100.
 
-NOTE: 192.0.2.0/24 is only an example and should never be announced, nor used in any production network.
+**NOTE: 192.0.2.0/24 is only an example and should never be announced, nor used in any production network.**
 
 1) Connect to OAM VPN
 2) Login to router using IDAM credentials
@@ -31,15 +31,13 @@ NOTE: 192.0.2.0/24 is only an example and should never be announced, nor used in
     8.8.8.8/24; ## Existing network
     [edit policy prefix-list LAX1-OUT-v4]
     user@mx#
-5) Use "show | compare" to view the result of your "set" command. This is equivalent to the "diff" command on POSIX systems.::
+
+5) Use "show | compare" to view the result of the "set" command. This is equivalent to the "diff" command on POSIX systems.::
 
     [edit policy prefix-list LAX1-OUT-v4]
     user@mx# show | compare
-    ...
-    4.2.2.0/24; ## Existing network
+    [edit policy prefix-list LAX1-OUT-v4]
     + 192.0.2.0/24;
-    8.8.8.8/24; ## Existing network
-    ...
     [edit policy prefix-list LAX1-OUT-v4]
     user@mx#
 
@@ -60,7 +58,7 @@ NOTE: 192.0.2.0/24 is only an example and should never be announced, nor used in
     [edit]
     user@mx#
 
-7) Next, we will configure 192.0.2.0/24 on ae0.100::
+7) Next, configure 192.0.2.0/24 on ae0.100::
 
     [edit]
     user@mx# edit interface ae0 unit 100
@@ -70,11 +68,28 @@ NOTE: 192.0.2.0/24 is only an example and should never be announced, nor used in
     vlan-id 100;
     family inet;
     [edit interface ae0 unit 100]
-    user@mx\# set family inet address 192.0.2.1/30
+    user@mx# set family inet address 192.0.2.1/30
     [edit interface ae0 unit 100]
-    user@mx\# show | compare
+    user@mx# show | compare
     [edit interface ae0 unit 100 family inet address]
     + 192.0.2.1/30;
-    user@mx\# top
+    user@mx# top
 
-8)
+8) Review all changes from the top level of the configuration::
+
+    [edit]
+    user@mx# show | compare
+    [edit interface ae0 unit 100 family inet address]
+    + 192.0.2.1/30;
+    [edit routing-options rib inet.0 aggregate]
+    + 192.0.2.0/24;
+    [edit policy prefix-list LAX1-OUT-v4]
+    + 192.0.2.0/24;
+    [edit]
+    user@mx#
+
+**You should see only the changes you applied using these steps. If you see anything additional, do not "commit". There is likely configuration from another user's session which has become merged with your change.**
+
+9) Once you are satisfied with your configuration additions, execute "commit check" to validate your syntax. If no error is returned, you may continue.
+
+10) Once "commit check" clears, run "commit" to implement the change in the running configuration, as well as the persistent configuration on the system.
