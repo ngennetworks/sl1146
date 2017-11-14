@@ -170,7 +170,7 @@ Example from Level3 (for 8.8.8.0/24)::
 Introduce a New IPv6 Prefix
 ---------------------------
 
-In this exercise, we will be adding the documentation prefix "2001:DB8::/48" to a router interface, and adjust routing policy statements to annouce the IP space to the upstream IP Transit provider. We will assign a /30 address on interface "ae0.100"; this is a LAG interface with a VLAN tag of 100.
+In this exercise, we will be adding the documentation prefix "2001:DB8::/48" to a router interface, and adjust routing policy statements to annouce the IP space to the upstream IP Transit provider. We will assign a /64 address on interface "ae0.100"; this is a LAG interface with a VLAN tag of 100.
 
 **NOTE: 2001:DB8::/48 is only an example and should never be announced, nor used in any production network.**
 
@@ -228,11 +228,11 @@ In this exercise, we will be adding the documentation prefix "2001:DB8::/48" to 
     vlan-id 100;
     family inet;
     [edit interface ae0 unit 100]
-    user@mx# set family inet6 address 2001:DB8::1/48
+    user@mx# set family inet6 address 2001:DB8::1/64
     [edit interface ae0 unit 100]
     user@mx# show | compare
     [edit interface ae0 unit 100 family inet6 address]
-    + 2001:DB8::1/48;
+    + 2001:DB8::1/64;
     user@mx# top
 
 8) Review all changes from the top level of the configuration::
@@ -240,7 +240,7 @@ In this exercise, we will be adding the documentation prefix "2001:DB8::/48" to 
     [edit]
     user@mx# show | compare
     [edit interface ae0 unit 100 family inet6 address]
-    + 2001:DB8::1/48;
+    + 2001:DB8::1/64;
     [edit routing-options rib inet6.0 aggregate]
     + 2001:DB8::/48;
     [edit policy prefix-list LAX1-OUT-v6]
