@@ -5,9 +5,8 @@ sl1146 Documentation
 .. toctree::
    :maxdepth: 4
    :caption: Contents:
-   :titlesonly:
-
-   self
+   
+   genindex
    *.rst
 
 
