@@ -70,11 +70,11 @@ NOTE: 192.0.2.0/24 is only an example and should never be announced, nor used in
     vlan-id 100;
     family inet;
     [edit interface ae0 unit 100]
-    user@mx# set family inet address 192.0.2.1/30
+    user@mx\# set family inet address 192.0.2.1/30
     [edit interface ae0 unit 100]
-    user@mx# show | compare
+    user@mx\# show | compare
     [edit interface ae0 unit 100 family inet address]
     + 192.0.2.1/30;
-    user@mx# top
+    user@mx\# top
 
 8)
