@@ -5,14 +5,7 @@ sl1146 Documentation
 .. toctree::
    :maxdepth: 4
    :caption: Contents:
-
-
-Navigation
-==================
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+   
 Topics
 ======
 * :ref:`introduce-new-prefix`
