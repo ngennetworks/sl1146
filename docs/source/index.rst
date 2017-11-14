@@ -23,3 +23,24 @@ Topics
 * :ref:`add-prefix-vlan`
 * :ref:`bgp-validation`
 * :ref:``
+
+.. _introduce-new-prefix:
+
+Introduce a New Prefix
+----------------------
+
+.. _route-prefix-to-host:
+
+Route Prefix to Host
+--------------------
+
+.. _add-prefix-vlan:
+
+Add Prefix to a VLAN Interface
+------------------------------
+
+
+.. _bgp-validation:
+
+Validate BGP Announcements
+--------------------------
