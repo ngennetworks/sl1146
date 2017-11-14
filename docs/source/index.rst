@@ -10,9 +10,16 @@ sl1146 Documentation
    This is the section on adding a new prefix
 
 
-Topics
+Navigation
 ==================
-* :ref:`add_new_prefix_`
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Topics
+======
+* :ref:`introduce-new-prefix`
+* :ref:`route-prefix-to-host`
+* :ref:`add-prefix-vlan`
+* :ref:`bgp-validation`
+* :ref:``
