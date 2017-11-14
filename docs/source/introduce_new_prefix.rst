@@ -126,7 +126,7 @@ In this exercise, we will be adding the documentation prefix "192.0.2.0/24" to a
 .. _Sprint: https://www.sprint.net/lg/
 .. _HE.net: https://lg.he.net/
 
-**For more information on validating BGP routing, visit ":ref:`bgp-validation`".
+**For more information on validating BGP routing, visit ":ref:`bgp-validation`".**
 
 Example from Level3 (for 8.8.8.0/24)::
 
